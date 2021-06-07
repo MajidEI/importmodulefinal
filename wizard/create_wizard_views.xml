@@ -1,0 +1,63 @@
+<odoo>
+    <data>
+        <record id="create_wizard_form_view_wiz" model="ir.ui.view">
+            <field name="name">create.wizard.form.view.wiz</field>
+            <field name="model">createee.wizard</field>
+            <field name="arch" type="xml">
+               <form>
+                    <group>
+                        <group>
+                            <field name="file"/>
+                            <field name="file_type"/>
+                        </group>
+                    </group>
+                <tree> 
+                
+                </tree>
+                    <footer>
+                        <button name="import_file" string="Import" type="object" class="btn btn-primary"/>
+                        <button string="Cancel" special="cancel" class="btn btn-secondary" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+         <record id="create_wizard_form_view_wiz_parent" model="ir.ui.view">
+            <field name="name">create.wizard.form.view.wiz</field>
+            <field name="model">createee.wizard.parent</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="res_model"/>
+                            <field name="file"/>
+                            <field name="file_type"/>
+                        </group>
+                    </group>
+                <tree> 
+                
+                </tree>
+                    <footer>
+                        <button name="import_file" string="Import" type="object" class="btn btn-primary"/>
+                        <button string="Cancel" special="cancel" class="btn btn-secondary" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="wizard_action_parent" model="ir.actions.act_window">
+            <field name="name">Importing wizard parent</field>
+            <field name="res_model">createee.wizard.parent</field>
+            <field name="view_mode">form</field>
+            <field name="target">current</field>
+        </record>
+        
+        <!--<record id="wizard_action" model="ir.actions.act_window">
+            <field name="name">Importing wizard</field>
+            <field name="res_model">createee.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">current</field>
+        </record>-->
+
+    </data>
+</odoo>
